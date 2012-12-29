@@ -3,21 +3,62 @@
 <head>
   <meta charset="utf-8">
   <title>My AngularJS App</title>
+  <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
   <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
+  
+  <h1>Angular Dashboard</h1>  
 
-  <div ng-view></div>
+  <section id="main" class="row-fluid">
+    <div class="span3">
+      <dl>
+        <dt>Twitter</dt>
+        <dd>
+          <p>
+             spencer1248 RT @tomdale: Just merged the new router API into Ember.js master: https://t.co/qYBjkWLZ
+          </p>   
+        </dd>
+      </dl>
+    </div>
+    <div class="span3">
+      <dl>
+        <dt>Github</dt>
+        <dd>
+          <p>
+             spencer1248 RT @tomdale: Just merged the new router API into Ember.js master: https://t.co/qYBjkWLZ
+          </p>   
+        </dd>
+      </dl>
+    </div>
+    <div class="span3">
+      <dl>
+        <dt>StackOverflow</dt>
+        <dd>
+          <p>
+             spencer1248 RT @tomdale: Just merged the new router API into Ember.js master: https://t.co/qYBjkWLZ
+          </p>   
+        </dd>
+      </dl>
+    </div>
+    <div class="span3">
+      <dl>
+        <dt>r/angular.js</dt>
+        <dd>
+          <p>
+             spencer1248 RT @tomdale: Just merged the new router API into Ember.js master: https://t.co/qYBjkWLZ
+          </p>   
+        </dd>
+      </dl>
+    </div>
+  </section>
 
-  <div>Angular seed app: v<span app-version></span></div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
   -->
+
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   <script src="lib/angular/angular.js"></script>
   <script src="js/app.js"></script>
   <script src="js/services.js"></script>
