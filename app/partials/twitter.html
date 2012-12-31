@@ -2,11 +2,17 @@
   <dl>
     <dt>Twitter</dt>
     <dd ng-repeat="tweet in tweets">
-      <p>
-        {{tweet.from_user}} 
-        <span ng-bind-html="tweet.text | autoLinkLite">
-        </span> {{tweet.created_at | date:shortDate }} 
+      <div class="user">
+        <a href="https://www.twitter.com/{{tweet.from_user}}/status/{{tweet.id_str}}">{{tweet.from_user}}</a>
+      </div>
+      <p class="content">
+        <!-- username with link, text,  @username with link, parse out the link, time ago-->
+        <span ng-bind-html="tweet.text | autoLinkLite | parseTwitterUserTag">
+        </span> 
      </p>   
+     <div class="meta">
+       {{ tweet.created_at | epochTime | date:'short' }} 
+     </div>
     </dd>
     <dd>
       
