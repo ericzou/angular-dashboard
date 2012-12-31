@@ -1,10 +1,9 @@
 'use strict';
 
 /* Filters */
-
-angular.module('myApp.filters', []).
-  filter('interpolate', ['version', function(version) {
+angular.module('angular.dashboard.filters', []).
+  filter('autoLinkLite', function() {
     return function(text) {
-      return String(text).replace(/\%VERSION\%/mg, version);
+      return String(text).replace(/(https?:\/\/[^\s]*)/, "<a href=\"$1\">$1</a>");
     }
-  }]);
+  });
