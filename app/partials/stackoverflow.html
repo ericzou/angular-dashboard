@@ -1,0 +1,14 @@
+
+<div class="span3" ng-controller="StackOverflowController">
+  <dl>
+    <dt>StackOverflow</dt>
+    <dd ng-repeat="question in questions">
+      <p>
+        {{question.title}}
+      </p>
+      <p>
+        {{question.score}}, {{question.answer_count}}, {{question.view_count}}, {{question.is_answered}}
+      </p>
+   </dd>
+ </dl>
+</div>

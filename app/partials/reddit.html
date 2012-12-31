@@ -1,0 +1,10 @@
+<div class="span3" ng-controller="RedditController">
+  <dl>
+    <dt>r/angular.js</dt>
+    <dd ng-repeat="post in posts">
+      <p>
+        {{post.score}}, {{post.author}}, <a href="{{post.permalink}}">{{post.title}}</a>, {{post.num_comments}}, {{post.created_utc }}
+      </p>
+   </dd>
+ </dl>
+</div>

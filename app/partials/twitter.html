@@ -1,0 +1,15 @@
+<div class="span3" ng-controller="TwitterController">
+  <dl>
+    <dt>Twitter</dt>
+    <dd ng-repeat="tweet in tweets">
+      <p>
+        {{tweet.from_user}} 
+        <span ng-bind-html="tweet.text | autoLinkLite">
+        </span> {{tweet.created_at | date:shortDate }} 
+     </p>   
+    </dd>
+    <dd>
+      
+   </dd>
+ </dl>
+</div>

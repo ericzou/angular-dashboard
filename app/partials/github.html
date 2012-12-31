@@ -1,0 +1,16 @@
+<div class="span3" ng-controller="GithubController">
+  <dl>
+    <dt>Github</dt>
+
+    {{events.type}}
+    <dd ng-repeat="event in events">
+      <img ng-src="{{event.actor.avatar_url}}" alt="gravator" width="50" height="50">
+      <p>
+        {{event.type}}  
+      </p>
+      <p>
+        {{event.created_at}}
+      </p>   
+    </dd>
+  </dl>
+</div>
