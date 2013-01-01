@@ -25,7 +25,6 @@ function RedditController($scope, Reddit) {
   $scope.posts = redditData.data.children.map(function(e) {
     return e.data;
   });
-  console.log($scope.posts)
   // Reddit.read({}, function(data) {
   //   $scope.posts = data.data.children;
   // });
