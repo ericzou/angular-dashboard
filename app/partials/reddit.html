@@ -2,9 +2,7 @@
   <dl>
     <dt>r/angular.js</dt>
     <dd ng-repeat="post in posts">
-      <p>
-        {{post.score}}, {{post.author}}, <a href="{{post.permalink}}">{{post.title}}</a>, {{post.num_comments}}, {{post.created_utc }}
-      </p>
+      {{post.score}} <i class="icon-chevron-up"></i> {{post.author}}: <a href="{{post.url}}">{{post.title}}</a> - <a href="http://www.reddit.com/{{post.permalink}}">{{post.num_comments}}</a> <i class="icon-comment"></i>
    </dd>
  </dl>
 </div>
