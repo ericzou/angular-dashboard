@@ -3,12 +3,8 @@
   <dl>
     <dt>StackOverflow</dt>
     <dd ng-repeat="question in questions">
-      <p>
-        {{question.title}}
-      </p>
-      <p>
-        {{question.score}}, {{question.answer_count}}, {{question.view_count}}, {{question.is_answered}}
-      </p>
+      <span>{{question.score}}<i class='icon-chevron-up'></i>/{{question.answer_count}} <i class="icon-comment"></i></span>
+      <a href="{{question.link}}">{{question.title}}</a>
    </dd>
  </dl>
 </div>
