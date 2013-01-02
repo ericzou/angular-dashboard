@@ -4,7 +4,7 @@
     <dd ng-repeat="event in events">
       <div class="user">
         <img ng-src="{{event.actor.avatar_url}}" alt="gravator" width="30" height="30">
-        <a href="{{event.actor.url}}">{{event.actor.login}}</a>
+        <a href="{{event.actor.login | toGithubUserUrl }}">{{event.actor.login}}</a>
       </div>
       <div github-event event="event"></div>
       <p>

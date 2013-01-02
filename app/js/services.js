@@ -43,7 +43,7 @@ angular.module('angular.dashboard.services', ['ngResource']).
   }).
   factory("Reddit", function($resource) {
     return $resource('http://www.reddit.com/r/angularjs/new.json', 
-      { callback: 'JSON_CALLBACK' }, 
+      { jsonp: 'JSON_CALLBACK' }, 
       {
         read: {
           method: 'JSONP', 
@@ -54,7 +54,6 @@ angular.module('angular.dashboard.services', ['ngResource']).
         isArray: false
       });
   });
-  ;
 
 
 
