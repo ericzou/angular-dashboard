@@ -3,8 +3,15 @@
   <dl>
     <dt>StackOverflow</dt>
     <dd ng-repeat="question in questions">
-      <span>{{question.score}}<i class='icon-chevron-up'></i>/{{question.answer_count}} <i class="icon-comment"></i></span>
-      <a href="{{question.link}}">{{question.title}}</a>
+      <p>
+        {{question.score}}<i class='icon-chevron-up'></i>/{{question.answer_count}} <i class="icon-comment"></i>
+        <a href="{{question.link}}">{{question.title}}</a>  
+      </p>
+
+      <p>
+        {{question.creation_date*1000 | date:'short' }}
+      </p>
+      
    </dd>
  </dl>
 </div>

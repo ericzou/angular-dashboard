@@ -2,7 +2,13 @@
   <dl>
     <dt>r/angular.js</dt>
     <dd ng-repeat="post in posts">
-      {{post.score}} <i class="icon-chevron-up"></i> {{post.author}}: <a href="{{post.url}}">{{post.title}}</a> - <a href="http://www.reddit.com/{{post.permalink}}">{{post.num_comments}}</a> <i class="icon-comment"></i>
+      <p>
+        {{post.score}} <i class="icon-chevron-up"></i> {{post.author}}: <a href="{{post.url}}">{{post.title}}</a> - <a href="http://www.reddit.com/{{post.permalink}}">{{post.num_comments}}</a> <i class="icon-comment"></i>  
+      </p>
+      
+      <p>
+        {{post.created*1000 | date:'short'}}
+      </p>
    </dd>
  </dl>
 </div>
