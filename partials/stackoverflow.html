@@ -1,0 +1,17 @@
+
+<div class="span3" ng-controller="StackOverflowController">
+  <dl>
+    <dt>StackOverflow</dt>
+    <dd ng-repeat="question in questions">
+      <p>
+        {{question.score}}<i class='icon-chevron-up'></i>/{{question.answer_count}} <i class="icon-comment"></i>
+        <a href="{{question.link}}">{{question.title}}</a>  
+      </p>
+
+      <p>
+        {{question.last_activity_date*1000 | date:'short' }}
+      </p>
+      
+   </dd>
+ </dl>
+</div>
